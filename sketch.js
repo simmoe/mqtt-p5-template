@@ -16,19 +16,7 @@ function setup() {
   //   select('#hum').html('X på eriks m5: ' + message )
   // })  
 
-  fetch('https://api.solcast.com.au/world_radiation/estimated_actuals?latitude=-43.573988&longitude=172.603256&hours=168&api_key=jacI5fs0Onfix4CcJkNPkyfKJLOG5wnb&', {
-    // method: 'GET', // *GET, POST, PUT, DELETE, etc.
-    // mode: 'no-cors', // no-cors, *cors, same-origin
-    // cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
-    // credentials: 'omit', // include, *same-origin, omit
-    headers: {
-      'Content-Type': 'application/json'
-      // 'Content-Type': 'application/x-www-form-urlencoded',
-    },
-    // redirect: 'follow', // manual, *follow, error
-    // referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
-    //body: JSON.stringify(data) // body data type must match "Content-Type" header
-  })
+  fetch('https://api.solcast.com.au/world_radiation/forecasts?latitude=-43.573988&longitude=172.603256&hours=168&api_key=jacI5fs0Onfix4CcJkNPkyfKJLOG5wnb')
   //fetch('https://developer.nrel.gov/api/solar/data_query/v1?format=json&api_key=SnTGwoF36OB0c5TGGvlAUxB3kLAQu4HJUXBoDRnn&lat=-43.573988&lon=172.603256&hours=168')
   
   .then( res => res.json() )
